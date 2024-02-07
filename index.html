@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Code</title>
+  </head>
+  <body>
+    <script>
+        var retry = "y";
+        while(retry == "y")
+      {
+        let user = prompt("choose : rock/paper/scissors");
+        const scope = ["rock", "paper", "scissors"];
+        const comp = scope[Math.floor(Math.random() * scope.length)];
+        if (user == comp) {
+          alert("User:" + user + "\nComputer:" + comp + "\nIts A Draw");
+        } else if (user == "rock" && comp == "scissors") {
+          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+        } else if (user == "paper" && comp == "rock") {
+          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+        } else if (user == "scissors" && comp == "paper") {
+          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+        } else {
+          alert("User:" + user + "\nComputer:" + comp + "\nYou Loose");
+        }
+        retry = prompt("Play Again? (y/n):");
+      }
+    </script>
+  </body> 
+</html>
