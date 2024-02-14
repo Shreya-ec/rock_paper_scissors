@@ -6,24 +6,31 @@
   <body>
     <script>
         var retry = "y";
+        var score = 0;
+        var total = 0;
         while(retry == "y")
       {
         let user = prompt("choose : rock/paper/scissors");
         const scope = ["rock", "paper", "scissors"];
         const comp = scope[Math.floor(Math.random() * scope.length)];
         if (user == comp) {
-          alert("User:" + user + "\nComputer:" + comp + "\nIts A Draw");
+          alert("You: " + user + "\nComputer: " + comp + "\nIts A Draw");
         } else if (user == "rock" && comp == "scissors") {
-          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+          alert("You: " + user + "\nComputer: " + comp + "\nYou Win!");
+          score++;
         } else if (user == "paper" && comp == "rock") {
-          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+          alert("You: " + user + "\nComputer: " + comp + "\nYou Win!");
+          score++;
         } else if (user == "scissors" && comp == "paper") {
-          alert("User:" + user + "\nComputer:" + comp + "\nYou Win!");
+          alert("You: " + user + "\nComputer: " + comp + "\nYou Win!");
+          score++;
         } else {
-          alert("User:" + user + "\nComputer:" + comp + "\nYou Loose");
+          alert("You: " + user + "\nComputer:" + comp + "\nYou Loose");
         }
         retry = prompt("Play Again? (y/n):"); 
+        total++;
       }
+      prompt("Your Score upto now: " + score + "/" + total +"\nThanks for playing!");
     </script>
   </body> 
 </html>
